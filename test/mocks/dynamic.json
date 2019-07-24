@@ -1,0 +1,40 @@
+{
+  "name": "dynamic_segment",
+  "ruleset": [
+    {
+      "rule_name": "rule_0",
+      "condition_test": "IN",
+      "value_comparison": ["France", "Italy", "Japan", "Republic of Korea", "Iceland"],
+      "value_comparison_type": "value",
+      "variable_name": "country",
+      "condition_output": {
+        "primary_language": "preferred_language",
+        "required_language_hours": "calculated_language_hours"
+      },
+      "condition_output_types": {
+        "primary_language": "variable",
+        "required_language_hours": "variable"
+      }
+    }, {
+      "rule_name": "rule_1",
+      "value_minimum": "dynamic_income_low",
+      "condition_test": "RANGE",
+      "value_minimum_type": "variable",
+      "value_maximum": "dynamic_income_high",
+      "value_maximum_type": "variable",
+      "variable_name": "family_income",
+      "condition_output": {
+        "scholarship": 50000
+      }
+    }, {
+      "rule_name": "rule_2",
+      "value_comparison": "gpa_limit",
+      "value_comparison_type": "variable",
+      "condition_test": "GT",
+      "variable_name": "gpa",
+      "condition_output": {
+        "additional_scholarship": 50000
+      }
+    }
+  ]
+}

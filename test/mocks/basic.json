@@ -1,0 +1,70 @@
+{
+  "name": "basic_segment",
+  "ruleset": [
+    {
+      "rule_name": "rule_0",
+      "condition_test": "GT",
+      "value_comparison": 18,
+      "value_comparison_type": "value",
+      "variable_name": "age",
+      "condition_output": {
+        "old_enough": true 
+      }
+    },
+    {
+      "rule_name": "rule_1",
+      "condition_test": "IN",
+      "value_comparison": ["Canada", "United States", "Australia", "United Kingdom", "New Zealand", "Ireland"],
+      "value_comparison_type": "value",
+      "variable_name": "country",
+      "condition_output": {
+        "primary_language": "English",
+        "required_language_hours": 0
+      }
+    },
+    {
+      "rule_name": "rule_2",
+      "condition_test": "NOTIN",
+      "value_comparison": ["Canada", "United States", "Australia", "United Kingdom", "New Zealand", "Ireland"],
+      "value_comparison_type": "value",
+      "variable_name": "country",
+      "condition_output": {
+        "required_language_hours": 120
+      }
+    },
+    {
+      "rule_name": "rule_3",
+      "condition_test": "RANGE",
+      "value_minimum": 0,
+      "value_minimum_type": "value",
+      "value_maximum": 49999,
+      "value_maximum_type": "value",
+      "variable_name": "family_income",
+      "condition_output": {
+        "scholarship": 50000
+      }
+    }, {
+      "rule_name": "rule_4",
+      "condition_test": "RANGE",
+      "value_minimum": 50000,
+      "value_minimum_type": "value",
+      "value_maximum": 99999,
+      "value_maximum_type": "value",
+      "variable_name": "family_income",
+      "condition_output": {
+        "scholarship": 20000
+      }
+    }, {
+      "rule_name": "rule_5",
+      "condition_test": "RANGE",
+      "value_minimum": 100000,
+      "value_minimum_type": "value",
+      "value_maximum": 200000,
+      "value_maximum_type": "value",
+      "variable_name": "family_income",
+      "condition_output": {
+        "scholarship": 10000
+      }
+    }
+  ]
+}
