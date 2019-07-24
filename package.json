@@ -8,7 +8,7 @@
   },
   "author": "DigiFi",
   "dependencies": {
-    "@digifi-los/comparison": "^0.0.1",
+    "@digifi-los/comparison": "^0.0.2",
     "promisie": "^1.6.1"
   },
   "devDependencies": {
